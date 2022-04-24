@@ -57,7 +57,7 @@ class MyHomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const TelaDados()),
+                  MaterialPageRoute(builder: (context) => TelaDados()),
                 );
               },
             ),
@@ -92,7 +92,7 @@ class MyHomePage extends StatelessWidget {
                 ElevatedButton(onPressed: () {
                   Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const TelaDados()),
+                  MaterialPageRoute(builder: (context) => TelaDados()),
                 );
                 }, child: Text('Rolar')),
                 SizedBox(width: 10),
