@@ -1,15 +1,16 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 
 class TelaDados extends StatefulWidget {
   TelaDados({Key? key}) : super(key: key);
- 
+
   @override
   Roll createState() => Roll();
 }
 
 class Roll extends State<TelaDados> {
-
   var imageArray = [
     'one.png',
     'two.png',
@@ -18,8 +19,8 @@ class Roll extends State<TelaDados> {
     'five.png',
     'six.png'
   ];
-  int randomIntForDiceOne = Random().nextInt(6);
-  int randomIntForDiceTwo = Random().nextInt(6);
+  int primeiroDado = Random().nextInt(6);
+  int segundoDado = Random().nextInt(6);
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +37,9 @@ class Roll extends State<TelaDados> {
             Padding(
               padding: const EdgeInsets.only(bottom: 60),
               child: Text(
-                'A soma é: ' +
-                    (randomIntForDiceOne + randomIntForDiceTwo + 2).toString(),
+                'A soma é: ' + (primeiroDado + segundoDado + 2).toString(),
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 24,
                   color: Colors.white,
                 ),
               ),
@@ -48,12 +48,12 @@ class Roll extends State<TelaDados> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 Image.asset(
-                  'images/' + imageArray[randomIntForDiceOne],
+                  'images/' + imageArray[primeiroDado],
                   height: 150,
                   width: 150,
                 ),
                 Image.asset(
-                  'images/' + imageArray[randomIntForDiceTwo],
+                  'images/' + imageArray[segundoDado],
                   height: 150,
                   width: 150,
                 ),
@@ -63,7 +63,16 @@ class Roll extends State<TelaDados> {
               padding: const EdgeInsets.only(top: 60),
               child: ElevatedButton(
                 onPressed: changeImage,
-                child: Text('Rolar'),
+                child: Text(
+                  'Rolar',
+                  style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 20,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                ),
               ),
             )
           ],
@@ -74,9 +83,8 @@ class Roll extends State<TelaDados> {
 
   void changeImage() {
     setState(() {
-      randomIntForDiceOne = Random().nextInt(6);
-      randomIntForDiceTwo = Random().nextInt(6);
+      primeiroDado = Random().nextInt(6);
+      segundoDado = Random().nextInt(6);
     });
   }
 }
-
