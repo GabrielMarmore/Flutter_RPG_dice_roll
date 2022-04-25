@@ -11,12 +11,66 @@ class Sobre extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(
-        color: Colors.grey[850],
         padding: const EdgeInsets.all(3.0),
         alignment: Alignment.center,
         child: Column(
           children: const [
-            Text("Sobre a Aplicação"),
+            Padding(
+              padding: EdgeInsets.fromLTRB(16, 16, 16, 2),
+              child: Text(
+                "Componentes do grupo",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Text(
+              "DDMI - Projeto P1",
+              style: TextStyle(fontSize: 16),
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Gabriel Mármore',
+                  style: TextStyle(color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+                subtitle: Text(
+                  "https://github.com/GabrielMarmore",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              color: Colors.purple,
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Lucas Celestino',
+                  style: TextStyle(color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+                subtitle: Text(
+                  "https://github.com/LucasCelestino",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              color: Colors.purple,
+            ),
+            Card(
+              child: ListTile(
+                title: Text(
+                  'Wilson Iglesias',
+                  style: TextStyle(color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+                subtitle: Text(
+                  "https://github.com/WilsonIglesias",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              color: Colors.purple,
+            ),
           ],
         ),
       ),
