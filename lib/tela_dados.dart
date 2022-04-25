@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, no_logic_in_create_state
-
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -7,10 +5,10 @@ class TelaDados extends StatefulWidget {
   TelaDados({Key? key}) : super(key: key);
  
   @override
-  roll createState() => roll();
+  Roll createState() => Roll();
 }
 
-class roll extends State<TelaDados> {
+class Roll extends State<TelaDados> {
 
   var imageArray = [
     'one.png',
